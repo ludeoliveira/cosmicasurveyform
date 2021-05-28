@@ -9,7 +9,7 @@
     <div class="grid-container">
   <header>
     <img src="images/cosmicalogo.png" alt="logo cosmica serigrafia">
-    <h1 id="title">Hi, Cosmic friend!</h1>
+    <h1 id="title">Hello, Cosmic friend!</h1>
     <p id="description"> Thank you for taking the time to help us improve our services by telling us about your experience with <em><strong>Cósmica Serigrafia</strong></em>.</p>
   </header>
 
@@ -17,7 +17,7 @@
     <section>
     <label id="name-label" for="name">what's your name?</label>
     <br>
-    <input
+    <input class="field"
            id="name"
            name="name"
            type="text"
@@ -28,20 +28,20 @@
     <section>
     <label id="email-label" for="email">what's your email?</label>
     <br>
-    <input id="email"
+    <input class="field"
+            id="email"
            name="email"
            type="email" required
            placeholder="me@example.com">
      </section>
 
-     <section>
-    <label id="number-label" for="number">Age (optional)</label>
-    <br>
-    <input id="number"
+    <section>
+    <label id="number-label" for="number">Age(optional) </label>
+    <input class="dropdown-text
+           id="number"
            name="number"
            type="number"
-           min="18" max="120"
-           placeholder="Enter your age">
+           min="18" max="120">
     </section>
 
     <section>
@@ -70,7 +70,7 @@
 
     <section>
     <p>Overall how satisfied or dissatisfied are you with our company?</p>
-      <select name="satisfaction" id="dropdown">
+      <select class="dropdown-text" ame="satisfaction" id="dropdown">
         <option disabled selected value>Select current status</option>
         <option value="Very satisfied">Very satisfied</option>
         <option value="Somewhat satisfied">Somewhat satisfied</option>
@@ -166,7 +166,8 @@
 
      <section>
       <p>Any comments or suggestions?</p>
-        <textarea id="textarea"
+        <textarea
+        class="dropdown-text id="textarea"
                   name="aditional info"
                   cols="30" rows="5"
                   placeholder="Tell us what you love about us or what we could be doing better">
