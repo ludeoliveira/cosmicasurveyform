@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Cosmica serigrafia Survey form</title>
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body>
+    <div class="grid-container">
+  <header>
+    <img src="images/cosmicalogo.png" alt="logo cosmica serigrafia">
+    <h1 id="title">Hi, Cosmic friend!</h1>
+    <p id="description"> Thank you for taking the time to help us improve our services by telling us about your experience with <em><strong>Cósmica Serigrafia</strong></em>.</p>
+  </header>
+
+  <form id="survey-form">
+    <section>
+    <label id="name-label" for="name">what's your name?</label>
+    <br>
+    <input
+           id="name"
+           name="name"
+           type="text"
+           placeholder="Enter your first and last name"
+           required>
+    </section>
+
+    <section>
+    <label id="email-label" for="email">what's your email?</label>
+    <br>
+    <input id="email"
+           name="email"
+           type="email" required
+           placeholder="me@example.com">
+     </section>
+
+     <section>
+    <label id="number-label" for="number">Age (optional)</label>
+    <br>
+    <input id="number"
+           name="number"
+           type="number"
+           min="18" max="120"
+           placeholder="Enter your age">
+    </section>
+
+    <section>
+      <p>Gender. How do you identify?</p>
+        <input type="radio"
+               id="Woman"
+               name="gender"
+               value="Woman"
+               >
+        <label for="Woman">Woman</label>
+        <br>
+        <input type="radio"
+               id="Non-binary"
+               name="gender"
+               value="Non-binary"
+               >
+        <label for="Non-binary">Non-binary</label>
+        <br>
+        <input type="radio"
+               id="Man"
+               name="gender"
+               value="Man"
+               >
+        <label for="Man">Man</label>
+    </section>
+
+    <section>
+    <p>Overall how satisfied or dissatisfied are you with our company?</p>
+      <select name="satisfaction" id="dropdown">
+        <option disabled selected value>Select current status</option>
+        <option value="Very satisfied">Very satisfied</option>
+        <option value="Somewhat satisfied">Somewhat satisfied</option>
+        <option value="Neither satisfied or dissatisfied">Neither satisfied or dissatisfied</option>
+        <option value="Somewhat dissatisfied">Somewhat dissatisfied</option>
+        <option value="Very dissatisfied">Very dissatisfied</option>
+      </select>
+    </section>
+
+    <section>
+      <p>Wich of the following words would you use to describe our products or services? (select one or more)</p>
+        <label>
+          <input type="checkbox"
+               id="Reliable"
+               name="service description"
+               value="Reliable"
+               checked>
+        Reliable
+        </label>
+       <br>
+       <label>
+         <input type="checkbox"
+                id="High quality"
+                name="service description"
+                value="High quality"
+                >
+          High quality
+       </label>
+      <br>
+       <label>
+       <input type="checkbox"
+                id="Unique"
+                name="service description"
+                value="Unique"
+                >
+          Unique
+       </label>
+      <br>
+       <label>
+       <input type="checkbox"
+                id="Overpriced"
+                name="service description"
+                value="Overpriced"
+                >
+          Overpriced
+       </label>
+      <br>
+       <label>
+       <input type="checkbox"
+                id="Fair"
+                name="service description"
+                value="Fair"
+                >
+          Fair
+       </label>
+      <br>
+       <label>
+       <input type="checkbox"
+                id="Ok"
+                name="service description"
+                value="Ok"
+                >
+          Ok
+       </label>
+      <br>
+       <label>
+       <input type="checkbox"
+                id="Poor"
+                name="service description"
+                value="Poor"
+                >
+          Poor
+       </label>
+      <br>
+       <label>
+       <input type="checkbox"
+                id="Fast"
+                name="service description"
+                value="Fast"
+                >
+          Fast
+       </label>
+      <br>
+       <label>
+       <input type="checkbox"
+                id="Attentive"
+                name="service description"
+                value="Attentive"
+                >
+          Attentive
+       </label>
+     </section>
+
+     <section>
+      <p>Any comments or suggestions?</p>
+        <textarea id="textarea"
+                  name="aditional info"
+                  cols="30" rows="5"
+                  placeholder="Tell us what you love about us or what we could be doing better">
+      </textarea>
+      </section>
+      <br>
+
+    <button id="submit" type="submit">Sign up</button>
+   </form>
+
+</div>
+
+  </body>
+</html>
