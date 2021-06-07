@@ -3,14 +3,14 @@
   <head>
     <meta charset="utf-8">
     <title>Cosmica serigrafia Survey form</title>
-    <link type="text/css" rel="stylesheet" href="./main.css">
+    <link type="text/css" rel="stylesheet" href="main.css">
   </head>
   <body>
     <div class="grid-container">
   <header>
     <img src="images/cosmicalogo.png" alt="logo cosmica serigrafia">
     <h1 id="title">Hello, Cosmic friend!</h1>
-    <p id="description"> Thank you for taking the time to help us improve our services by telling us about your experience with <em><strong>Cósmica Serigrafia</strong></em>.</p>
+    <p class= "form-description" id="description"> Thank you for taking the time to help us improve our services by telling us about your experience with <a href="https://www.instagram.com/cosmicaseri/" target= "_blank"><em><strong>Cósmica Serigrafia</strong></em></a>.</p>
   </header>
 
   <form id="survey-form">
@@ -37,39 +37,22 @@
 
     <section>
     <label id="number-label" for="number">Age(optional) </label>
-    <input class="dropdown-text
+    <input class="dropdown-text"
            id="number"
            name="number"
            type="number"
            min="18" max="120">
     </section>
 
-    <section>
-      <p>Gender. How do you identify?</p>
-        <input type="radio"
-               id="Woman"
-               name="gender"
-               value="Woman"
-               >
-        <label for="Woman">Woman</label>
-        <br>
-        <input type="radio"
-               id="Non-binary"
-               name="gender"
-               value="Non-binary"
-               >
-        <label for="Non-binary">Non-binary</label>
-        <br>
-        <input type="radio"
-               id="Man"
-               name="gender"
-               value="Man"
-               >
-        <label for="Man">Man</label>
-    </section>
+    <section> <p>Gender. How do you identify?</p> <input type="radio" id="Woman"
+    name="gender" value="Woman" > <label for="Woman">Woman</label> <br> <input
+    type="radio" id="Non-binary" name="gender" value="Non-binary" > <label
+    for="Non-binary">Non-binary</label> <br> <input type="radio" id="Man"
+    name="gender" value="Man" > <label for="Man">Man</label> </section>
 
     <section>
     <p>Overall how satisfied or dissatisfied are you with our company?</p>
+      <div class="select">
       <select class="dropdown-text" ame="satisfaction" id="dropdown">
         <option disabled selected value>Select current status</option>
         <option value="Very satisfied">Very satisfied</option>
@@ -167,10 +150,9 @@
      <section>
       <p>Any comments or suggestions?</p>
         <textarea
-        class="dropdown-text id="textarea"
-                  name="aditional info"
-                  cols="30" rows="5"
-                  placeholder="Tell us what you love about us or what we could be doing better">
+        class="dropdown-text" id= "textarea"
+                  name= "aditional info"
+                  placeholder="Tell us what you love about us or what we could be doing better" >
       </textarea>
       </section>
       <br>
