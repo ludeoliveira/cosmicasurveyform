@@ -197,7 +197,7 @@ select {
 .text-area {
   font: inherit;
   font-size: 1em;
-  width: minmax(30ch, auto);
+  width: 80%;
   background: #cfa7f9;
   border:0;
   color: #226050;
@@ -257,5 +257,6 @@ grid-template-rows: auto auto;
 grid-template-columns: auto;
 margin: 1em 1.5em;
 }
+
 
 }
