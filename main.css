@@ -226,7 +226,7 @@ button {
 
 
 
-@media (max-width: 768px) {
+@media mobile (max-width: 768px) {
 
 header {
   grid-row: 1 / 1;
