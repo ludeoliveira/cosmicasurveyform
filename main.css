@@ -7,6 +7,13 @@
   box-sizing: border-box;
 }
 
+::placeholder {
+  color: #black;
+}
+.force-opaque::placeholder {
+  opacity: 1;
+}
+
 body {
   color: #226050;
   font-family: 'Ubuntu', sans-serif;
