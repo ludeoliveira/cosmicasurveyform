@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,500;1,300;1,500&display=swap" rel="stylesheet');
 
 /* GLOBAL STYLES */
 *,
@@ -14,14 +13,36 @@
   opacity: 1;
 }
 
+
 body {
-  color: #226050;
-  font-family: 'Ubuntu', sans-serif;
+  color: #black;
+  font-family: 'Josefin Sans', futura, sans-serif;
   font-size: 1em;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.6;
-  background-color: #226050;
+  /* background-color: #226050; */
+  /* background: black; */
+  background: linear-gradient(90deg, #000000, #414141);
+  background-size: 300% 300%;
+  animation: gradient 15s ease infinite;
 }
+
+
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+/* HEADER */
 
 header {
   grid-column: 1 / 2;
@@ -31,22 +52,38 @@ header {
 
 header img {
   width: 20vw;
-  margin: 2em 0 0 -1em;
+  margin: .6em 0 0 -1em;
   padding-bottom: .5em;
 }
 
 h1 {
-  color: #cfa7f9;
-  font-size: 3.5em;
+  /* color: #cfa7f9; */
+  color: white;
+  font-size: 4em;
+  font-weight: 700;
   line-height: 1em;
   margin-top: 10px;
+  /* text-transform:uppercase; */
+}
+.form-description {
+  margin: -2em 0 3em 0;
+  font-weight: 600;
+  font-size: 1.2em;
+  color: #c8ed00;
+  line-height: 1.3;
+  padding: .3em;
+}
+
+.form-description a {
+  color: #f39ed6;
+  /* background-color: #f64700; */
 }
 
 /* CONTAINER */
 
 .grid-container {
   display: inline-grid;
-  grid-template-columns: minmax(18ch, 40ch) repeat(3, auto);
+  grid-template-columns: minmax(24ch, 60ch) repeat(3, auto);
   grid-template-rows: repeat(4, auto)
   gap: 2em;
   margin: 2em;
@@ -55,14 +92,13 @@ h1 {
 /* FORM */
 
 form {
-  /* background-color: #ffccda; */
-  background-color: #f39ed6;
-  /* box-shadow: 1px 1px 1px 2px #39403e; */
+  --background: white;
+  background: var(--background);
   box-shadow: 0 -2px 10px rgba(0, 0, 0, 1);
   border-radius: 5px;
-  /* border: 1px solid #0733d6; */
   display: grid;
-  font-weight: 300;
+  font-weight: 400;
+  font-size: 1.2em;
   gap: 1.5em;
   grid-template-rows: auto;
   grid-column: 2 / 4;
@@ -73,46 +109,35 @@ form {
 }
 
 .question {
-  font-weight: 500;
-  color: #226050;
+  font-weight: 600;
+  color: #f9413d;
 }
 
-.form-description {
-  margin: -2em 0 3em 0;
-  font-weight: 500;
-  /* background-color: #f64700; */
-  color: white;
-  padding: .3em;
-}
 
-.form-description a {
-  color: white;
-  background-color: #f64700;
-}
 
 /* FIELD */
 
 .field,
 .dropdown-text {
   width: 100%;
-  background-color: #f39ed6;
-  border-color: transparent transparent #f64700;
+  background: var(--background);
+  border-color: transparent transparent #f39ed6;
   border-style: solid;
   border-width: 2px;
   border-radius: 0;
-  color: #164c3d;
+  color: black;
   font-size: 1em;
   font-family: inherit;
   font-weight: 300;
 }
 .gender-field {
   width: 100%;
-  background-color: #f39ed6;
-  border-color: transparent transparent #f64700;
+  background: var(--background);
+  border-color: transparent transparent #f39ed6;
   border-style: solid;
   border-width: 2px;
   border-radius: 0;
-  color: #164c3d;
+  color: black;
   font-size: 1em;
   font-family: inherit;
   font-weight: 300;
@@ -120,7 +145,7 @@ form {
 }
 
 .age-line {
-  width: 13ch;
+  width: 12ch;
 }
 
 /* INPUT */
@@ -143,9 +168,13 @@ select {
   font: inherit;
   font-size:1em;
   padding: .3em 1.3em .3em .3em;
-  background: #cfa7f9;
-  color: #226050;
-  border:0;
+  /* background: #cfa7f9; */
+  background: var(--background);
+  border-color: #f39ed6;
+  border-style: solid;
+  border-width: 2px;
+  color: black;
+  /* border:0; */
   width: auto;
   position: relative;
 }
@@ -156,7 +185,7 @@ select {
 }
 
 .custom-arrow {
-  background: #f64700;
+  background: #f39ed6;
   display: block;
   height: 100%;
   position: absolute;
@@ -181,15 +210,25 @@ select {
 .custom-arrow::before {
   border-left: var(--size) solid transparent;
   border-right: var(--size) solid transparent;
-  border-bottom: var(--size) solid #ffccda;
+  border-bottom: var(--size) solid #f9413d;
   top: 35%;
 }
 
 .custom-arrow::after {
   border-left: var(--size) solid transparent;
   border-right: var(--size) solid transparent;
-  border-top: var(--size) solid #ffccda;
+  border-top: var(--size) solid #f9413d;
   top: 65%;
+}
+
+/* SELECT APPEARANCE IN SAFARI */
+@media not all and (min-resolution:.001dpcm) {
+     @supports (-webkit-appearance:none) {
+    .customselect,
+    .custom-arrow {
+      display: none;
+    }
+  }
 }
 
 /* TEXT AREA */
@@ -197,10 +236,13 @@ select {
 .text-area {
   font: inherit;
   font-size: 1em;
+  font-weight: 300;
   width: 80%;
-  background: #cfa7f9;
-  border:0;
-  color: #226050;
+  background: var(--background);
+  border-color: #f39ed6;
+  border-style: solid;
+  border-width: 2px;
+  color: black;
   line-height: 1.3em;
   padding: .2em 1.3em .2em .2em;
   /* padding: 0.3em; */
@@ -211,13 +253,14 @@ select {
 /* BUTTON */
 
 button {
-  background-color: #f64700;
+  background-color: #f39ed6;
   border-radius: 5px;
-  color: #ffccda;
+  box-shadow: 0 -1px 2px rgba(0, 0, 0, 10);
+  color: #f9413d;
   border-color: : transparent;
-  font-family: 'Ubuntu', sans-serif;
-  font-size: 1em;
-  font-weight: 500;
+  font-family: 'Josefin Sans', futura, sans-serif;
+  font-size: 1.3em;
+  font-weight: 600;
   border:0;
   padding: .4em;
   width: 30%;
@@ -231,25 +274,29 @@ button {
 header {
   grid-row: 1 / 1;
   grid-column: 1 /2;
-  margin: 0;
+  margin-top: -2em;
+  margin-bottom: -3em;
   text-align: center;
+  padding: .5em;
 }
 
 header img {
   width: 60vw;
+
 }
 
 h1 {
   font-size: 2em;
-  padding-bottom: 0.5em;
+  padding-top: .5em;
+  padding-bottom: 1em;
 }
 
 form {
   grid-row: 2 / 2;
   grid-column: 1 /2;
   margin-left: 0;
-  margin-top: 0;
-  padding: 2em;
+  margin-top: .5em;
+  padding: 1em;
 }
 .grid-container {
 display: inline-grid;
